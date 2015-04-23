@@ -15,7 +15,7 @@ class Route < Template
   end
 
   def post(path)
-    @post_response = "I'm getting #{path}!"
+    @post_response = "I'm posting #{path}!"
   end
 
 end
@@ -29,5 +29,5 @@ class Request < Route
 
 end
 
-
-request = Request.new("GET","/contacts")
+Request.new("GET","/contacts")
+Request.new("POST","/contacts")
